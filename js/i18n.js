@@ -31,7 +31,7 @@ const translations = {
     },
     about: {
       eyebrow: 'A casa',
-      title: 'Dois tipos de produto, o mesmo ofício',
+      title: 'Vários tipos de produto, o mesmo ofício',
       commercial: 'Na frente comercial, a Ebon Labs coloca o negócio na internet do jeito que a pessoa já compra e marca horário: uma página clara e um WhatsApp. Assim nasceram o site da Toque e Corpo, o cardápio da Croc Croc e o portfólio de Inah Irenam.',
       social: 'Na frente social, o estúdio organiza informação pública e experimenta aprendizagem. O Escolha Consciente reúne dados oficiais do TSE, da Câmara e do Senado para as Eleições 2026. O Educaverso é um protótipo de sala de aula em realidade virtual, em que a turma explora o sistema solar pelo olhar.',
       place: 'O estúdio responde por <a href="mailto:ebonlabs@gmail.com">ebonlabs@gmail.com</a>.',
@@ -196,7 +196,7 @@ const translations = {
     },
     about: {
       eyebrow: 'The studio',
-      title: 'Two kinds of product, the same craft',
+      title: 'Several kinds of product, the same craft',
       commercial: 'On the commercial side, Ebon Labs puts the business on the internet the way the person already buys and books: a clear page and a WhatsApp chat. That is how the Toque e Corpo site, the Croc Croc menu and the Inah Irenam portfolio came to be.',
       social: 'On the social side, the studio organizes public information and experiments with learning. Escolha Consciente gathers official records from Brazil’s electoral court, the Chamber of Deputies and the Senate for the 2026 elections. Educaverso is a virtual-reality classroom prototype in which the class explores the solar system by looking.',
       place: 'The studio replies at <a href="mailto:ebonlabs@gmail.com">ebonlabs@gmail.com</a>.',
@@ -361,7 +361,7 @@ const translations = {
     },
     about: {
       eyebrow: 'La casa',
-      title: 'Dos tipos de producto, el mismo oficio',
+      title: 'Varios tipos de producto, el mismo oficio',
       commercial: 'En la frente comercial, Ebon Labs pone el negocio en internet del modo en que la persona ya compra y reserva: una página clara y un WhatsApp. Así nacieron el sitio de Toque e Corpo, el menú de Croc Croc y el portafolio de Inah Irenam.',
       social: 'En la frente social, el estudio organiza información pública y experimenta con el aprendizaje. Escolha Consciente reúne datos oficiales del TSE, de la Cámara y del Senado para las Elecciones 2026. Educaverso es un prototipo de aula en realidad virtual, en el que el grupo explora el sistema solar con la mirada.',
       place: 'El estudio responde en <a href="mailto:ebonlabs@gmail.com">ebonlabs@gmail.com</a>.',
