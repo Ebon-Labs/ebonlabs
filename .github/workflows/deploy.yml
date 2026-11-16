@@ -49,4 +49,4 @@ jobs:
         run: npm run build
 
       - name: Deploy to Cloudflare Pages
-        run: npx wrangler pages deploy dist --project-name=spa-template --branch=main
+        run: npx wrangler pages deploy dist --project-name=ebonlabs --branch=main

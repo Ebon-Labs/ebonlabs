@@ -60,7 +60,7 @@ function initHeader() {
     links.classList.remove('open');
     toggle.classList.remove('open');
     toggle.setAttribute('aria-expanded', 'false');
-    toggle.setAttribute('aria-label', 'Abrir menu');
+    toggle.setAttribute('aria-label', typeof t === 'function' ? t('nav.openMenu') : 'Abrir menu');
     document.body.classList.remove('nav-open');
   };
 
@@ -68,7 +68,9 @@ function initHeader() {
     const open = links.classList.toggle('open');
     toggle.classList.toggle('open', open);
     toggle.setAttribute('aria-expanded', String(open));
-    toggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+    toggle.setAttribute('aria-label', open
+      ? (typeof t === 'function' ? t('nav.closeMenu') : 'Fechar menu')
+      : (typeof t === 'function' ? t('nav.openMenu') : 'Abrir menu'));
     document.body.classList.toggle('nav-open', open);
   });
 
@@ -103,10 +105,39 @@ function initReveal() {
   targets.forEach((el) => observer.observe(el));
 }
 
+function initCarousels() {
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  document.querySelectorAll('[data-carousel]').forEach((root) => {
+    const track = root.querySelector('.carousel__track');
+    const prev = root.querySelector('.carousel__prev');
+    const next = root.querySelector('.carousel__next');
+    if (!track || !prev || !next) return;
+
+    const step = () => track.clientWidth;
+    const update = () => {
+      const max = track.scrollWidth - track.clientWidth - 4;
+      prev.disabled = track.scrollLeft <= 4;
+      next.disabled = track.scrollLeft >= max;
+    };
+
+    prev.addEventListener('click', () => {
+      track.scrollBy({ left: -step(), behavior: reduce ? 'auto' : 'smooth' });
+    });
+    next.addEventListener('click', () => {
+      track.scrollBy({ left: step(), behavior: reduce ? 'auto' : 'smooth' });
+    });
+    track.addEventListener('scroll', update, { passive: true });
+    update();
+  });
+}
+
 const year = document.getElementById('year');
 if (year) year.textContent = String(new Date().getFullYear());
 
 initWhatsapp();
 renderCatalog();
 initHeader();
+initCarousels();
 initReveal();
+if (typeof initI18n === 'function') initI18n();

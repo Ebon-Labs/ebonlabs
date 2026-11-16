@@ -1,126 +1,552 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nome do projeto</title>
-  <meta name="description" content="Descrição curta do negócio, com a cidade quando o atendimento é local.">
-  <meta name="robots" content="index, follow, max-image-preview:large">
-  <meta name="theme-color" content="#1f4d3a">
-  <link rel="canonical" href="https://spa-template.pages.dev/">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ebon Labs — tecnologia, inovação e educação</title>
+    <meta name="description"
+        content="A Ebon Labs, estúdio de Ive Tourinho, publica sites e produtos digitais para negócios locais e para causas públicas.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#061a33">
+    <link rel="canonical" href="https://ebonlabs.pages.dev/">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="pt_BR">
-  <meta property="og:site_name" content="Nome do projeto">
-  <meta property="og:title" content="Nome do projeto">
-  <meta property="og:description" content="Descrição curta do negócio, com a cidade quando o atendimento é local.">
-  <meta property="og:url" content="https://spa-template.pages.dev/">
-  <meta property="og:image" content="https://spa-template.pages.dev/assets/favicon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Ebon Labs">
+    <meta property="og:title" content="Ebon Labs — tecnologia, inovação e educação">
+    <meta property="og:description"
+        content="Sites e produtos digitais para negócios locais e para causas públicas. Estúdio de Ive Tourinho.">
+    <meta property="og:url" content="https://ebonlabs.pages.dev/">
+    <meta property="og:image" content="https://ebonlabs.pages.dev/assets/og.jpg">
 
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Nome do projeto">
-  <meta name="twitter:description" content="Descrição curta do negócio, com a cidade quando o atendimento é local.">
-  <meta name="twitter:image" content="https://spa-template.pages.dev/assets/favicon.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ebon Labs — tecnologia, inovação e educação">
+    <meta name="twitter:description"
+        content="Sites e produtos digitais para negócios locais e para causas públicas. Estúdio de Ive Tourinho.">
+    <meta name="twitter:image" content="https://ebonlabs.pages.dev/assets/og.jpg">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,640&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 
-  <script type="application/ld+json">
+    <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Nome do projeto",
-    "description": "Descrição curta do negócio, com a cidade quando o atendimento é local.",
-    "url": "https://spa-template.pages.dev/",
-    "image": "https://spa-template.pages.dev/assets/favicon.svg",
-    "telephone": "+5571000000000",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Salvador",
-      "addressRegion": "BA",
-      "addressCountry": "BR"
-    }
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://ebonlabs.pages.dev/#org",
+        "name": "Ebon Labs",
+        "url": "https://ebonlabs.pages.dev/",
+        "email": "ebonlabs@gmail.com",
+        "description": "Estúdio que publica sites e produtos digitais para negócios locais e para causas públicas.",
+        "image": "https://ebonlabs.pages.dev/assets/og.jpg",
+        "founder": { "@id": "https://ebonlabs.pages.dev/#ive" },
+        "sameAs": [
+          "https://www.linkedin.com/in/ive-tourinho/",
+          "https://medium.com/@ivetourinho"
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://ebonlabs.pages.dev/#ive",
+        "name": "Ive Tourinho",
+        "image": "https://ebonlabs.pages.dev/assets/ive.jpg",
+        "jobTitle": "Engenheiro de software",
+        "email": "ivetourinho@gmail.com",
+        "telephone": "+5571986858520",
+        "url": "https://www.linkedin.com/in/ive-tourinho/",
+        "sameAs": ["https://medium.com/@ivetourinho"],
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Universidade Federal da Bahia"
+        },
+        "worksFor": { "@id": "https://ebonlabs.pages.dev/#org" }
+      }
+    ]
   }
   </script>
 </head>
+
 <body>
-  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+    <a class="skip-link" href="#conteudo" data-i18n="skip">Ir para o conteúdo</a>
 
-  <header class="header" id="topo">
-    <nav class="nav container" aria-label="Principal">
-      <a class="nav__logo" href="#topo">Nome do projeto</a>
-      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu-nav" aria-label="Abrir menu">
-        <span></span>
-      </button>
-      <ul class="nav__links" id="menu-nav">
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#catalogo">Catálogo</a></li>
-        <li><a href="#contato">Contato</a></li>
-        <li><a class="nav__cta" href="https://wa.me/5571000000000" data-whatsapp="Olá! Quero saber mais sobre Nome do projeto." target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header class="header" id="topo">
+        <nav class="nav container" aria-label="Principal" data-i18n-attr="aria-label:nav.label">
+            <a class="nav__logo" href="#topo" aria-label="Ebon Labs">
+                <img src="assets/logo.svg" alt="" width="1148" height="746">
+            </a>
+            <div class="nav__end">
+                <ul class="nav__links" id="menu-nav">
+                    <li><a href="#sobre" data-i18n="nav.about">Sobre</a></li>
+                    <li><a href="#projetos" data-i18n="nav.projects">Projetos</a></li>
+                    <li><a href="#criador" data-i18n="nav.creator">Criador</a></li>
+                    <li><a href="#contato" data-i18n="nav.contact">Contato</a></li>
+                    <li><a class="nav__cta" href="https://wa.me/5571986858520"
+                            data-whatsapp="Olá! Quero conversar sobre um projeto com a Ebon Labs."
+                            data-i18n="nav.whatsapp" data-i18n-attr="data-whatsapp:wa.project" target="_blank"
+                            rel="noopener noreferrer">WhatsApp</a></li>
+                </ul>
+                <div class="lang-switcher" id="lang-switcher" role="group" aria-label="Idioma"
+                    data-i18n-attr="aria-label:nav.language">
+                    <button class="lang-switcher__btn is-active" type="button" data-lang="pt" aria-pressed="true"
+                        title="Português" lang="pt">PT</button>
+                    <button class="lang-switcher__btn" type="button" data-lang="en" aria-pressed="false" title="English"
+                        lang="en">EN</button>
+                    <button class="lang-switcher__btn" type="button" data-lang="es" aria-pressed="false" title="Español"
+                        lang="es">ES</button>
+                </div>
+                <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu-nav"
+                    aria-label="Abrir menu" data-i18n-attr="aria-label:nav.openMenu">
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
 
-  <main id="conteudo">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="container hero__layout">
-        <p class="eyebrow">Salvador — BA</p>
-        <h1 id="hero-title">Nome do projeto</h1>
-        <p class="hero__lead">Uma frase sobre o que a casa faz e para quem.</p>
-        <div class="hero__actions">
-          <a class="btn" href="#catalogo">Ver catálogo</a>
-          <a class="btn btn--ghost" href="https://wa.me/5571000000000" data-whatsapp="Olá! Quero saber mais sobre Nome do projeto." target="_blank" rel="noopener noreferrer">Chamar no WhatsApp</a>
+    <main id="conteudo">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="container hero__layout">
+                <p class="eyebrow" data-i18n="hero.eyebrow">Tecnologia, inovação e educação</p>
+                <h1 id="hero-title">Ebon Labs</h1>
+                <p class="hero__lead" data-i18n="hero.lead">Estúdio de Ive Tourinho que publica sites e produtos
+                    digitais para quem vive de um ofício e para causas públicas. O mesmo cuidado vai da agenda de uma
+                    terapeuta à cédula eleitoral e à sala de aula em realidade virtual.</p>
+                <div class="hero__actions">
+                    <a class="btn" href="#projetos" data-i18n="hero.projects">Ver projetos</a>
+                    <a class="btn btn--ghost" href="https://wa.me/5571986858520"
+                        data-whatsapp="Olá! Quero conversar sobre um projeto com a Ebon Labs." data-i18n="hero.whatsapp"
+                        data-i18n-attr="data-whatsapp:wa.project" target="_blank" rel="noopener noreferrer">Chamar no
+                        WhatsApp</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="sobre" aria-labelledby="sobre-title">
+            <div class="container about">
+                <div class="reveal">
+                    <p class="eyebrow" data-i18n="about.eyebrow">A casa</p>
+                    <h2 class="section__title" id="sobre-title" data-i18n="about.title">Dois tipos de produto, o mesmo
+                        ofício</h2>
+                    <p data-i18n="about.commercial">Na frente comercial, a Ebon Labs coloca o negócio na internet do
+                        jeito que a pessoa já compra e marca horário: uma página clara e um WhatsApp. Assim nasceram o
+                        site da Toque e Corpo, o cardápio da Croc Croc e o portfólio de Inah Irenam.</p>
+                    <p data-i18n="about.social">Na frente social, o estúdio organiza informação pública e experimenta
+                        aprendizagem. O Escolha Consciente reúne dados oficiais do TSE, da Câmara e do Senado para as
+                        Eleições 2026. O Educaverso é um protótipo de sala de aula em realidade virtual, em que a turma
+                        explora o sistema solar pelo olhar.</p>
+                    <p data-i18n-html="about.place">O estúdio responde por <a
+                            href="mailto:ebonlabs@gmail.com">ebonlabs@gmail.com</a>.</p>
+                </div>
+                <div class="about__photo reveal">
+                    <img src="assets/logo.svg" alt="Marca Ebon Labs: Ebon em azul-marinho e Labs em azul."
+                        data-i18n-attr="alt:about.logoAlt" width="1148" height="746">
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--paper" id="projetos" aria-labelledby="projetos-title">
+            <div class="container">
+                <header class="reveal">
+                    <p class="eyebrow" data-i18n="projects.eyebrow">Portfólio</p>
+                    <h2 class="section__title" id="projetos-title" data-i18n="projects.title">Projetos</h2>
+                    <p class="section__desc" data-i18n="projects.desc">Cada trabalho junta fotos do próprio projeto e,
+                        quando existe, uma captura do site publicado.</p>
+                </header>
+
+                <h3 class="group-label" data-i18n="projects.commercial">Comerciais</h3>
+                <div class="projects">
+                    <article class="project reveal" id="toque-corpo" aria-labelledby="toque-title">
+                        <div>
+                            <p class="eyebrow project__kicker" data-i18n="projects.toque.kicker">Terapias integrativas
+                            </p>
+                            <h4 class="project__title" id="toque-title">Toque e Corpo</h4>
+                            <p data-i18n="projects.toque.text">Site de Gabriela Ferreira para apresentar massagem
+                                terapêutica, acupuntura, reiki, shiatsu, drenagem linfática e outras práticas. O texto
+                                explica o cuidado, o catálogo lista os serviços e o agendamento sai pelo WhatsApp.</p>
+                            <a class="project__link" href="https://toque-corpo.pages.dev/" target="_blank"
+                                rel="noopener noreferrer" data-i18n="projects.viewSite">Ver o site</a>
+                        </div>
+                        <div class="carousel" data-carousel>
+                            <div class="carousel__track">
+                                <figure class="carousel__slide">
+                                    <img src="assets/projetos/toque-corpo/inicio.jpg"
+                                        alt="Seção inicial do site Toque e Corpo, com a frase sobre o toque no corpo."
+                                        data-i18n-attr="alt:projects.toque.alt.home" width="1600" height="1008">
+                                    <figcaption class="carousel__caption" data-i18n="projects.toque.cap.home">Início
+                                    </figcaption>
+                                </figure>
+                                <figure class="carousel__slide">
+                                    <img src="assets/projetos/toque-corpo/espaco.jpg"
+                                        alt="Seção de boas-vindas do site Toque e Corpo, com o retrato, a marca e o convite ao espaço de cura."
+                                        data-i18n-attr="alt:projects.toque.alt.space" width="1600" height="1008">
+                                    <figcaption class="carousel__caption" data-i18n="projects.toque.cap.space">Espaço
+                                    </figcaption>
+                                </figure>
+                                <figure class="carousel__slide">
+                                    <img src="assets/projetos/toque-corpo/servicos.jpg"
+                                        alt="Seção de serviços do site Toque e Corpo, com massagem terapêutica, Tui Na, ventosaterapia e barras de Access."
+                                        data-i18n-attr="alt:projects.toque.alt.services" width="1600" height="1008">
+                                    <figcaption class="carousel__caption" data-i18n="projects.toque.cap.services">
+                                        Serviços</figcaption>
+                                </figure>
+                                <figure class="carousel__slide">
+                                    <img src="assets/projetos/toque-corpo/sobre.jpg"
+                                        alt="Seção sobre Gabriela Ferreira no site Toque e Corpo, com a formação e o método."
+                                        data-i18n-attr="alt:projects.toque.alt.about" width="1600" height="1008">
+                                    <figcaption class="carousel__caption" data-i18n="projects.toque.cap.about">Sobre
+                                    </figcaption>
+                                </figure>
+                                <figure class="carousel__slide">
+                                    <img src="assets/projetos/toque-corpo/promocao.jpg"
+                                        alt="Seção de promoção do site Toque e Corpo, com o formulário e os preços reduzidos."
+                                        data-i18n-attr="alt:projects.toque.alt.promo" width="1600" height="1008">
+                                    <figcaption class="carousel__caption" data-i18n="projects.toque.cap.promo">Promoção
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <button class="carousel__nav carousel__prev" type="button"
+                                aria-label="Imagem anterior de Toque e Corpo"
+                                data-i18n-attr="aria-label:projects.toque.prev">‹</button>
+                            <button class="carousel__nav carousel__next" type="button"
+                                aria-label="Próxima imagem de Toque e Corpo"
+                                data-i18n-attr="aria-label:projects.toque.next">›</button>
+                        </div>
+                    </article>
+
+                    <article class="project reveal" id="croc-croc" aria-labelledby="croc-title">
+                        <div>
+                            <p class="eyebrow project__kicker" data-i18n="projects.croc.kicker">Pipocas artesanais</p>
+                            <h4 class="project__title" id="croc-title">Croc Croc</h4>
+                            <p data-i18n="projects.croc.text">Site da casa de pipocas. Doces, salgadas, trufas, barrinha
+                                e pirulito aparecem em foto e no cardápio, com varejo, atacado e encomendas. O pedido
+                                segue pelo WhatsApp.</p>
+                            <a class="project__link" href="https://croc-croc.pages.dev/" target="_blank"
+                                rel="noopener noreferrer" data-i18n="projects.viewSite">Ver o site</a>
+                        </div>
+                        <div class="carousel" data-carousel>
+                            <div class="carousel__track">
+                                <figure class="carousel__slide">
+                                    <img src="assets/projetos/croc-croc/inicio.jpg"
+                                        alt="Seção inicial do site Croc Croc, com a marca, as listras e o convite ao cardápio."
+                                        data-i18n-attr="alt:projects.croc.alt.home" width="1280" height="660">
+                                    <figcaption class="carousel__caption" data-i18n="projects.croc.cap.home">Início
+                                    </figcaption>
+                                </figure>
+                                <figure class="carousel__slide">
+                                    <img src="assets/projetos/croc-croc/galeria.jpg"
+                                        alt="Galeria de presentes do site Croc Croc, com embalagens personalizadas."
+                                        data-i18n-attr="alt:projects.croc.alt.gallery" width="1280" height="688">
+                                    <figcaption class="carousel__caption" data-i18n="projects.croc.cap.gallery">Galeria
+                                    </figcaption>
+                                </figure>
+                                <figure class="carousel__slide">
+                                    <img src="assets/projetos/croc-croc/cardapio.jpg"
+                                        alt="Cardápio do site Croc Croc, com filtros e os preços de varejo."
+                                        data-i18n-attr="alt:projects.croc.alt.menu" width="1280" height="786">
+                                    <figcaption class="carousel__caption" data-i18n="projects.croc.cap.menu">Cardápio
+                                    </figcaption>
+                                </figure>
+                                <figure class="carousel__slide">
+                                    <img src="assets/projetos/croc-croc/calculadora.jpg"
+                                        alt="Calculadora do site Croc Croc, com o sabor, os gramas e o preço."
+                                        data-i18n-attr="alt:projects.croc.alt.calc" width="1280" height="854">
+                                    <figcaption class="carousel__caption" data-i18n="projects.croc.cap.calc">Calculadora
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <button class="carousel__nav carousel__prev" type="button"
+                                aria-label="Imagem anterior de Croc Croc"
+                                data-i18n-attr="aria-label:projects.croc.prev">‹</button>
+                            <button class="carousel__nav carousel__next" type="button"
+                                aria-label="Próxima imagem de Croc Croc"
+                                data-i18n-attr="aria-label:projects.croc.next">›</button>
+                        </div>
+                    </article>
+
+                    <article class="project reveal" id="inah-irenam" aria-labelledby="inah-title">
+                        <div>
+                            <p class="eyebrow project__kicker" data-i18n="projects.inah.kicker">Dança e produção
+                                cultural</p>
+                            <h4 class="project__title" id="inah-title">Inah Irenam</h4>
+                            <p data-i18n="projects.inah.text">Portfólio de Inah Irenam Oliveira da Silva,
+                                intérprete-criadora, pesquisadora, curadora e produtora cultural. O site reúne atuação,
+                                trajetória, destaques e acervo, em mais de um idioma, e abre conversa para quem quer
+                                contratar criação, produção ou formação.</p>
+                            <a class="project__link" href="https://inah-irenam.pages.dev/" target="_blank"
+                                rel="noopener noreferrer" data-i18n="projects.viewSite">Ver o site</a>
+                        </div>
+                        <div class="carousel" data-carousel>
+                            <div class="carousel__track">
+                                <figure class="carousel__slide">
+                                    <img src="assets/projetos/inah-irenam/inicio.jpg"
+                                        alt="Seção inicial do portfólio de Inah Irenam, com o título Dança, memória e política cultural."
+                                        data-i18n-attr="alt:projects.inah.alt.home" width="1600" height="1008">
+                                    <figcaption class="carousel__caption" data-i18n="projects.inah.cap.home">Início
+                                    </figcaption>
+                                </figure>
+                                <figure class="carousel__slide">
+                                    <img src="assets/projetos/inah-irenam/trajetoria.jpg"
+                                        alt="Seção Corpo, território e arquivo do site de Inah Irenam, com a foto na água e os trabalhos para assistir."
+                                        data-i18n-attr="alt:projects.inah.alt.path" width="1600" height="1008">
+                                    <figcaption class="carousel__caption" data-i18n="projects.inah.cap.path">Trajetória
+                                    </figcaption>
+                                </figure>
+                                <figure class="carousel__slide">
+                                    <img src="assets/projetos/inah-irenam/atuacao.jpg"
+                                        alt="Seção de atuação do site de Inah Irenam, com o catálogo de criação, produção, pesquisa e formação."
+                                        data-i18n-attr="alt:projects.inah.alt.work" width="1600" height="1008">
+                                    <figcaption class="carousel__caption" data-i18n="projects.inah.cap.work">Atuação
+                                    </figcaption>
+                                </figure>
+                                <figure class="carousel__slide">
+                                    <img src="assets/projetos/inah-irenam/sobre.jpg"
+                                        alt="Seção sobre Inah Irenam, com o retrato em cena e a trajetória."
+                                        data-i18n-attr="alt:projects.inah.alt.about" width="1600" height="1008">
+                                    <figcaption class="carousel__caption" data-i18n="projects.inah.cap.about">Sobre
+                                    </figcaption>
+                                </figure>
+                                <figure class="carousel__slide">
+                                    <img src="assets/projetos/inah-irenam/portfolio.jpg"
+                                        alt="Seção de portfólio do site de Inah Irenam, com cartazes e publicações."
+                                        data-i18n-attr="alt:projects.inah.alt.portfolio" width="1600" height="1008">
+                                    <figcaption class="carousel__caption" data-i18n="projects.inah.cap.portfolio">
+                                        Portfólio</figcaption>
+                                </figure>
+                                <figure class="carousel__slide">
+                                    <img src="assets/projetos/inah-irenam/destaques.jpg"
+                                        alt="Seção de destaques do site de Inah Irenam, com os formatos de trabalho e o convite para conversar."
+                                        data-i18n-attr="alt:projects.inah.alt.highlights" width="1600" height="1200">
+                                    <figcaption class="carousel__caption" data-i18n="projects.inah.cap.highlights">
+                                        Destaques</figcaption>
+                                </figure>
+                                <figure class="carousel__slide">
+                                    <img src="assets/projetos/inah-irenam/acervo.jpg"
+                                        alt="Seção de acervo do site de Inah Irenam, com a busca, os filtros e os registros."
+                                        data-i18n-attr="alt:projects.inah.alt.archive" width="1600" height="1008">
+                                    <figcaption class="carousel__caption" data-i18n="projects.inah.cap.archive">Acervo
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <button class="carousel__nav carousel__prev" type="button"
+                                aria-label="Imagem anterior de Inah Irenam"
+                                data-i18n-attr="aria-label:projects.inah.prev">‹</button>
+                            <button class="carousel__nav carousel__next" type="button"
+                                aria-label="Próxima imagem de Inah Irenam"
+                                data-i18n-attr="aria-label:projects.inah.next">›</button>
+                        </div>
+                    </article>
+                </div>
+
+                <h3 class="group-label" data-i18n="projects.social">De cunho social</h3>
+                <div class="projects">
+                    <article class="project reveal" id="escolha-consciente" aria-labelledby="escolha-title">
+                        <div>
+                            <p class="eyebrow project__kicker" data-i18n="projects.escolha.kicker">Eleições 2026 ·
+                                informação pública</p>
+                            <h4 class="project__title" id="escolha-title">Escolha Consciente</h4>
+                            <p data-i18n-html="projects.escolha.text">Aplicativo cívico e independente. A pessoa
+                                pesquisa candidaturas e mandatos em exercício, lê registros públicos do TSE, da Câmara e
+                                do Senado e organiza a própria cédula. Não representa órgão governamental, partido ou
+                                candidatura. O aplicativo está na <a
+                                    href="https://play.google.com/store/apps/details?id=br.com.escolhaconsciente.app"
+                                    target="_blank" rel="noopener noreferrer">Google Play</a> e na <a
+                                    href="https://apps.apple.com/br/app/escolha-consciente/id6809827176" target="_blank"
+                                    rel="noopener noreferrer">App Store</a>.</p>
+                            <p class="project__links">
+                                <a class="project__link" href="https://escolhaconsciente.app.br/" target="_blank"
+                                    rel="noopener noreferrer" data-i18n="projects.viewSite">Ver o site</a>
+                                <a class="project__link"
+                                    href="https://play.google.com/store/apps/details?id=br.com.escolhaconsciente.app"
+                                    target="_blank" rel="noopener noreferrer">Google Play</a>
+                                <a class="project__link"
+                                    href="https://apps.apple.com/br/app/escolha-consciente/id6809827176" target="_blank"
+                                    rel="noopener noreferrer">App Store</a>
+                            </p>
+                        </div>
+                        <div class="carousel carousel--phone" data-carousel>
+                            <div class="carousel__track">
+                                <figure class="carousel__slide">
+                                    <img src="assets/projetos/escolha-consciente/entrar.png"
+                                        alt="Tela de entrada do aplicativo Escolha Consciente, com e-mail, senha e acesso sem conta."
+                                        data-i18n-attr="alt:projects.escolha.alt.login" width="1080" height="2160">
+                                    <figcaption class="carousel__caption" data-i18n="projects.escolha.cap.login">Entrar
+                                    </figcaption>
+                                </figure>
+                                <figure class="carousel__slide">
+                                    <img src="assets/projetos/escolha-consciente/eleicoes.png"
+                                        alt="Tela Eleições 2026, com a ordem dos seis votos na urna."
+                                        data-i18n-attr="alt:projects.escolha.alt.elections" width="1080" height="2160">
+                                    <figcaption class="carousel__caption" data-i18n="projects.escolha.cap.elections">
+                                        Eleições 2026</figcaption>
+                                </figure>
+                                <figure class="carousel__slide">
+                                    <img src="assets/projetos/escolha-consciente/busca.png"
+                                        alt="Tela de busca de candidaturas por nome, com filtros de UF, cargo e situação."
+                                        data-i18n-attr="alt:projects.escolha.alt.search" width="1080" height="2160">
+                                    <figcaption class="carousel__caption" data-i18n="projects.escolha.cap.search">Busca
+                                    </figcaption>
+                                </figure>
+                                <figure class="carousel__slide">
+                                    <img src="assets/projetos/escolha-consciente/votacoes.png"
+                                        alt="Tela de votações de uma candidatura, com o voto registrado e o link da fonte."
+                                        data-i18n-attr="alt:projects.escolha.alt.votes" width="1080" height="2160">
+                                    <figcaption class="carousel__caption" data-i18n="projects.escolha.cap.votes">
+                                        Votações</figcaption>
+                                </figure>
+                                <figure class="carousel__slide">
+                                    <img src="assets/projetos/escolha-consciente/cedula.png"
+                                        alt="Tela de resultados em que as candidaturas já estão marcadas como na cédula."
+                                        data-i18n-attr="alt:projects.escolha.alt.ballot" width="1080" height="2160">
+                                    <figcaption class="carousel__caption" data-i18n="projects.escolha.cap.ballot">Na
+                                        cédula</figcaption>
+                                </figure>
+                                <figure class="carousel__slide">
+                                    <img src="assets/projetos/escolha-consciente/inicio.png"
+                                        alt="Tela inicial com perfis de partida por cargo: presidente, governador e senador."
+                                        data-i18n-attr="alt:projects.escolha.alt.home" width="1080" height="2160">
+                                    <figcaption class="carousel__caption" data-i18n="projects.escolha.cap.home">Início
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <button class="carousel__nav carousel__prev" type="button"
+                                aria-label="Imagem anterior de Escolha Consciente"
+                                data-i18n-attr="aria-label:projects.escolha.prev">‹</button>
+                            <button class="carousel__nav carousel__next" type="button"
+                                aria-label="Próxima imagem de Escolha Consciente"
+                                data-i18n-attr="aria-label:projects.escolha.next">›</button>
+                        </div>
+                    </article>
+
+                    <article class="project reveal" id="educaverso" aria-labelledby="educaverso-title">
+                        <div>
+                            <p class="eyebrow project__kicker" data-i18n="projects.educa.kicker">Educação · realidade
+                                virtual</p>
+                            <h4 class="project__title" id="educaverso-title">Educaverso</h4>
+                            <p data-i18n="projects.educa.text">Protótipo de sala de aula em realidade virtual para
+                                celular, no formato Google Cardboard. A turma entra numa sala com o sistema solar,
+                                observa os planetas, viaja até um corpo celeste, teleporta para a superfície e conversa
+                                por voz com as outras pessoas. A interação é pelo olhar, sem controle nas mãos. Feito em
+                                Unity como prova de conceito. Ainda não há um site público.</p>
+                        </div>
+                        <div class="carousel" data-carousel>
+                            <div class="carousel__track">
+                                <figure class="carousel__slide">
+                                    <img src="assets/projetos/educaverso/main.png"
+                                        alt="Tela inicial do Educaverso, com nome, criar sala, buscar sala e treinamento."
+                                        data-i18n-attr="alt:projects.educa.alt.home" width="794" height="473">
+                                    <figcaption class="carousel__caption" data-i18n="projects.educa.cap.home">Início
+                                    </figcaption>
+                                </figure>
+                                <figure class="carousel__slide">
+                                    <img src="assets/projetos/educaverso/instructions.png"
+                                        alt="Instruções para colocar o celular no óculos de realidade virtual e vestir o óculos."
+                                        data-i18n-attr="alt:projects.educa.alt.headset" width="794" height="473">
+                                    <figcaption class="carousel__caption" data-i18n="projects.educa.cap.headset">Óculos
+                                    </figcaption>
+                                </figure>
+                                <figure class="carousel__slide">
+                                    <img src="assets/projetos/educaverso/training.png"
+                                        alt="Tela de treinamento do olhar, com alvos e o botão de iniciar."
+                                        data-i18n-attr="alt:projects.educa.alt.training" width="794" height="473">
+                                    <figcaption class="carousel__caption" data-i18n="projects.educa.cap.training">
+                                        Treinamento</figcaption>
+                                </figure>
+                                <figure class="carousel__slide">
+                                    <img src="assets/projetos/educaverso/solar.png"
+                                        alt="Cena do sistema solar com Terra, Vênus e Mercúrio."
+                                        data-i18n-attr="alt:projects.educa.alt.solar" width="738" height="376">
+                                    <figcaption class="carousel__caption" data-i18n="projects.educa.cap.solar">Sistema
+                                        solar</figcaption>
+                                </figure>
+                            </div>
+                            <button class="carousel__nav carousel__prev" type="button"
+                                aria-label="Imagem anterior de Educaverso"
+                                data-i18n-attr="aria-label:projects.educa.prev">‹</button>
+                            <button class="carousel__nav carousel__next" type="button"
+                                aria-label="Próxima imagem de Educaverso"
+                                data-i18n-attr="aria-label:projects.educa.next">›</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="criador" aria-labelledby="criador-title">
+            <div class="container creator reveal">
+                <img class="creator__photo" src="assets/ive.jpg" alt="Ive Tourinho"
+                    data-i18n-attr="alt:creator.photoAlt" width="200" height="200">
+                <div>
+                    <p class="eyebrow" data-i18n="creator.eyebrow">Quem faz</p>
+                    <h2 class="section__title" id="criador-title">Ive Tourinho</h2>
+                    <p data-i18n="creator.p1">Engenheiro de software, com mais de dez anos em aplicações web de
+                        produção. O trabalho público dele está em arquitetura de front-end, React, Next.js e TypeScript,
+                        com atenção a desempenho e acessibilidade.</p>
+                    <p data-i18n="creator.p2">Na Thoughtworks, de junho de 2024 a agosto de 2026, liderou a entrega
+                        técnica de sistemas web. É graduado e mestre em Ciência da Computação pela Universidade Federal
+                        da Bahia. O mestrado, entre 2016 e 2018, é uma pesquisa na área de Machine Learning: agrupamento
+                        flexível para recomendação de pontos de interesse. Cursa pós-graduação em Engenharia de Software
+                        de IA Aplicada.</p>
+                    <p data-i18n="creator.p3">No começo da carreira, na MDS Tecnologia da Informação, conduziu o Acesso
+                        Brasil: um jogo sério e um tradutor interativo de português para Libras, premiado em projetos de
+                        aplicativo e jogos sérios de interesse público.</p>
+                    <ul class="contact-list">
+                        <li><a href="https://www.linkedin.com/in/ive-tourinho/" target="_blank"
+                                rel="noopener noreferrer">LinkedIn</a></li>
+                        <li><a href="https://medium.com/@ivetourinho" target="_blank"
+                                rel="noopener noreferrer">Medium</a></li>
+                        <li><a href="mailto:ivetourinho@gmail.com">ivetourinho@gmail.com</a></li>
+                        <li><a href="https://wa.me/5571986858520" data-whatsapp="Olá, Ive! Vi o site da Ebon Labs."
+                                data-i18n="creator.whatsapp" data-i18n-attr="data-whatsapp:wa.creator" target="_blank"
+                                rel="noopener noreferrer">WhatsApp (71) 98685-8520</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--paper" id="contato" aria-labelledby="contato-title">
+            <div class="container contact reveal">
+                <p class="eyebrow" data-i18n="contact.eyebrow">Contato</p>
+                <h2 class="section__title" id="contato-title" data-i18n="contact.title">Fale com a Ebon Labs</h2>
+                <p class="section__desc" data-i18n="contact.desc">Projeto novo, parceria ou uma conversa sobre o que já
+                    está no ar. O estúdio responde pelo e-mail. O criador, pelo WhatsApp, pelo LinkedIn e pelo blog no
+                    Medium.</p>
+                <ul class="contact-list">
+                    <li><a href="mailto:ebonlabs@gmail.com">ebonlabs@gmail.com</a></li>
+                    <li><a href="mailto:ivetourinho@gmail.com">ivetourinho@gmail.com</a></li>
+                    <li><a href="https://wa.me/5571986858520"
+                            data-whatsapp="Olá! Quero conversar sobre um projeto com a Ebon Labs."
+                            data-i18n="contact.whatsapp" data-i18n-attr="data-whatsapp:wa.project" target="_blank"
+                            rel="noopener noreferrer">WhatsApp (71) 98685-8520</a></li>
+                    <li><a href="https://www.linkedin.com/in/ive-tourinho/" target="_blank"
+                            rel="noopener noreferrer">linkedin.com/in/ive-tourinho</a></li>
+                    <li><a href="https://medium.com/@ivetourinho" target="_blank"
+                            rel="noopener noreferrer">medium.com/@ivetourinho</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__grid">
+            <p class="footer__name">Ebon Labs</p>
         </div>
-      </div>
-    </section>
+        <p class="footer__copy container">&copy; <span id="year"></span> Ebon Labs</p>
+        <p class="footer__credit container"><span data-i18n="footer.credit">Site por</span> <a
+                href="mailto:ebonlabs@gmail.com">Ebon Labs</a></p>
+    </footer>
 
-    <section class="section" id="sobre" aria-labelledby="sobre-title">
-      <div class="container about">
-        <div class="about__photo reveal" role="img" aria-label="Espaço reservado para a foto do cliente"></div>
-        <div class="reveal">
-          <p class="eyebrow">A casa</p>
-          <h2 class="section__title" id="sobre-title">Texto institucional</h2>
-          <p>Dois ou três parágrafos curtos. O que fica aqui é o que a pessoa lê sem rolar o catálogo: quem atende, onde e o que diferencia.</p>
-        </div>
-      </div>
-    </section>
+    <a class="whatsapp-float" href="https://wa.me/5571986858520"
+        data-whatsapp="Olá! Quero conversar sobre um projeto com a Ebon Labs." data-i18n="nav.whatsapp"
+        data-i18n-attr="aria-label:float;data-whatsapp:wa.project" target="_blank" rel="noopener noreferrer"
+        aria-label="Chamar no WhatsApp">WhatsApp</a>
 
-    <section class="section section--paper" id="catalogo" aria-labelledby="catalogo-title">
-      <div class="container">
-        <header class="reveal">
-          <p class="eyebrow">Catálogo</p>
-          <h2 class="section__title" id="catalogo-title">O que está à venda</h2>
-          <p class="section__desc">Cada item abre uma conversa no WhatsApp.</p>
-        </header>
-        <div class="catalog" id="catalogo-lista"></div>
-      </div>
-    </section>
-
-    <section class="section" id="contato" aria-labelledby="contato-title">
-      <div class="container contact reveal">
-        <p class="eyebrow">Contato</p>
-        <h2 class="section__title" id="contato-title">Fale com a casa</h2>
-        <p class="section__desc">O pedido sai pelo WhatsApp, com a mensagem já preenchida.</p>
-        <a class="btn" href="https://wa.me/5571000000000" data-whatsapp="Olá! Quero saber mais sobre Nome do projeto." target="_blank" rel="noopener noreferrer">Chamar no WhatsApp</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer__grid">
-      <p class="footer__name">Nome do projeto</p>
-      <p>Salvador · Bahia · Brasil</p>
-    </div>
-    <p class="footer__copy container">&copy; <span id="year"></span> Nome do projeto</p>
-    <p class="footer__credit container">Site por <a href="mailto:ebonlabs@gmail.com">Ebon Labs</a></p>
-  </footer>
-
-  <a class="whatsapp-float" href="https://wa.me/5571000000000" data-whatsapp="Olá! Quero saber mais sobre Nome do projeto." target="_blank" rel="noopener noreferrer" aria-label="Chamar no WhatsApp">WhatsApp</a>
-
-  <script src="js/config.js"></script>
-  <script src="js/main.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>

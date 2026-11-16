@@ -1,5 +1,5 @@
 {
-  "name": "spa-template",
+  "name": "ebonlabs",
   "private": true,
   "engines": {
     "node": ">=24"
@@ -7,7 +7,7 @@
   "scripts": {
     "build": "node scripts/build.js",
     "preview": "npm run build && python3 -m http.server 4173 --directory dist",
-    "deploy": "npm run build && wrangler pages deploy dist --project-name=spa-template --branch=main"
+    "deploy": "npm run build && wrangler pages deploy dist --project-name=ebonlabs --branch=main"
   },
   "devDependencies": {
     "wrangler": "^4.110.0"
