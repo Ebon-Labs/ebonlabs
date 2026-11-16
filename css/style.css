@@ -585,10 +585,11 @@ a {
   margin-bottom: 2rem;
 }
 
-.footer__name {
-  font-family: var(--display);
-  font-size: 1.6rem;
-  font-weight: 700;
+.footer__name img {
+  display: block;
+  height: 2.85rem;
+  width: auto;
+  filter: brightness(0) invert(1);
 }
 
 .footer__copy,
