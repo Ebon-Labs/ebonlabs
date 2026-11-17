@@ -26,12 +26,15 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--header) + 0.5rem);
+  background: #000;
 }
 
 body {
+  position: relative;
+  z-index: 0;
   font-family: var(--font);
   color: #f3f3f3;
-  background: #000;
+  background: transparent;
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -95,7 +98,7 @@ a {
 }
 
 .section--paper {
-  background: #000;
+  background: transparent;
 }
 
 .section__title {
@@ -288,10 +291,46 @@ a {
 }
 
 .hero {
-  padding: 6.5rem 0 4.5rem;
+  padding: 3.25rem 0 2.5rem;
+  overflow: clip;
+  background: transparent;
+}
+
+.hero__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.14fr);
+  gap: 1rem 1.5rem;
+  align-items: center;
+}
+
+.hero__visual {
+  position: relative;
+  margin: 0;
+  min-width: 0;
+  background: #000;
+}
+
+.hero__glow {
+  position: absolute;
+  z-index: 0;
+  inset: 18% 12% 14%;
+  border-radius: 50%;
   background:
-    radial-gradient(circle at 90% 10%, rgba(1, 94, 247, 0.22), transparent 32%),
-    #000;
+    radial-gradient(circle at 38% 42%, rgba(1, 94, 247, 0.42), transparent 58%),
+    radial-gradient(circle at 72% 62%, rgba(255, 64, 160, 0.28), transparent 52%);
+  filter: blur(28px);
+  pointer-events: none;
+}
+
+.hero__visual img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+}
+
+.hero [data-parallax] {
+  will-change: transform;
 }
 
 .hero h1 {
@@ -336,6 +375,15 @@ a {
   width: min(100%, 16rem);
   height: auto;
   filter: brightness(0) invert(1);
+}
+
+.site-web {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
 }
 
 .about p+p,
@@ -577,7 +625,7 @@ a {
 
 .footer {
   padding: 2.5rem 0 6rem;
-  background: #000;
+  background: transparent;
   color: #f3f3f3;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -688,8 +736,9 @@ code {
   }
 
   .hero__visual {
-    max-width: 22rem;
-    margin-inline: auto;
+    order: -1;
+    max-width: none;
+    margin-inline: 0;
   }
 
   .carousel__slide {
@@ -710,7 +759,8 @@ code {
     scroll-behavior: auto;
   }
 
-  .reveal {
+  .reveal,
+  [data-parallax] {
     opacity: 1;
     transform: none;
     transition: none;
@@ -718,5 +768,9 @@ code {
 
   .carousel__track {
     scroll-behavior: auto;
+  }
+
+  .site-web {
+    display: none;
   }
 }

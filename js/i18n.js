@@ -28,6 +28,7 @@ const translations = {
       lead: 'Estúdio de Ive Tourinho que publica sites e produtos digitais para quem vive de um ofício e para causas públicas. O mesmo cuidado vai da agenda de uma terapeuta à cédula eleitoral e à sala de aula em realidade virtual.',
       projects: 'Ver projetos',
       whatsapp: 'Chamar no WhatsApp',
+      imageAlt: 'Pessoa de cabelos crespos e óculos de realidade virtual, entre pincel, lâmpada, notebook, capelo e livro aberto.',
     },
     about: {
       eyebrow: 'A casa',
@@ -192,7 +193,7 @@ const translations = {
       lead: 'Ive Tourinho’s studio publishes websites and digital products for people who live from a craft and for public causes. The same care runs from a therapist’s schedule to the ballot and a virtual-reality classroom.',
       projects: 'View projects',
       whatsapp: 'Message on WhatsApp',
-      imageAlt: 'A phone, a site window, a card, a sphere and a ring in the Ebon Labs colors.',
+      imageAlt: 'A person with curly hair and a virtual-reality headset, among a paintbrush, light bulb, laptop, graduation cap and open book.',
     },
     about: {
       eyebrow: 'The studio',
@@ -357,7 +358,7 @@ const translations = {
       lead: 'El estudio de Ive Tourinho publica sitios y productos digitales para quien vive de un oficio y para causas públicas. El mismo cuidado va de la agenda de una terapeuta a la cédula electoral y al aula en realidad virtual.',
       projects: 'Ver proyectos',
       whatsapp: 'Escribir por WhatsApp',
-      imageAlt: 'Un celular, una ventana de sitio, una tarjeta, una esfera y un anillo en los colores de Ebon Labs.',
+      imageAlt: 'Una persona de cabello rizado y gafas de realidad virtual, entre pincel, bombilla, portátil, birrete y libro abierto.',
     },
     about: {
       eyebrow: 'La casa',
