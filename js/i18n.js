@@ -41,7 +41,7 @@ const translations = {
     projects: {
       eyebrow: 'Portfólio',
       title: 'Projetos',
-      desc: 'Cada trabalho junta fotos do próprio projeto e, quando existe, uma captura do site publicado.',
+      desc: 'O estúdio entra em cada um com a mesma vontade de acertar.',
       commercial: 'Comerciais',
       social: 'De cunho social',
       viewSite: 'Ver o site',
@@ -206,7 +206,7 @@ const translations = {
     projects: {
       eyebrow: 'Portfolio',
       title: 'Projects',
-      desc: 'Each piece brings photos from the project itself and, when one exists, a capture of the published site.',
+      desc: 'The studio takes on each one with the same wish to get it right.',
       commercial: 'Commercial',
       social: 'Social',
       viewSite: 'View the site',
@@ -371,7 +371,7 @@ const translations = {
     projects: {
       eyebrow: 'Portafolio',
       title: 'Proyectos',
-      desc: 'Cada trabajo reúne fotos del propio proyecto y, cuando existe, una captura del sitio publicado.',
+      desc: 'El estudio entra en cada uno con las mismas ganas de acertar.',
       commercial: 'Comerciales',
       social: 'De carácter social',
       viewSite: 'Ver el sitio',
